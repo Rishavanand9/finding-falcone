@@ -49,9 +49,13 @@ function Vehicles(props) {
     localStorage.setItem('vehicle', JSON.stringify(localVehicle))
   }
 
+  console.log(local_vehicleList)
+
   const filteredVehicleList = [...local_vehicleList].filter(
     (vehicle) => vehicle.max_distance >= planet.distance,
   )
+
+  console.log(filteredVehicleList)
 
   const VehicleModalContent = (i) => (
     <div className="planetImg">

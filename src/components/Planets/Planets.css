@@ -1,5 +1,5 @@
 .planetCard{
-    width: 100%;
+    width: auto;
     height: auto;
     overflow: scroll;
     display: flex;

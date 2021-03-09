@@ -1,14 +1,12 @@
 import './Header.css'
-//import { Reset } from '../../components'
+import { Reset } from '../../components'
 
-function Header(){
-
+function Header() {
   return (
     <>
       <div className="header">
-        <h4>Finding Falcone</h4>
-      </div>
-      <div className="headerChildren">
+        <h4 className="h4Header">Finding Falcone </h4>
+        <Reset />
       </div>
     </>
   )

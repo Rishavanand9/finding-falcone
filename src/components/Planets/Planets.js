@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { selectPlanet } from '../../features/planetSlice'
-import { ResponsiveCard, Vehicles } from '../../components'
+import { ResponsiveCard, Vehicles, Loader } from '../../components'
 import Donlon from '../../assets/Donlon.png'
 import Enchai from '../../assets/Enchai.png'
 import Jebing from '../../assets/Jebing.png'
@@ -38,6 +38,7 @@ function getImage(name) {
 
 function Planets() {
   const [modal, setModal] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   const user = useSelector(selectUser)
 
@@ -61,7 +62,9 @@ function Planets() {
 
   const handleFind = async (e) => {
     e.preventDefault()
-    
+
+    setLoading(true)
+
     if (localPlanet.filter((v, i, a) => a.indexOf(v) === i).length < 4) {
       alert('Please select atleast 4 Planets')
     } else {
@@ -76,6 +79,8 @@ function Planets() {
             result: results,
           }),
         )
+
+        setLoading(false)
 
         history.push('/result')
       }
@@ -103,6 +108,10 @@ function Planets() {
       />
     </div>
   )
+
+  if (loading) {
+    return <Loader />
+  }
 
   return (
     <>

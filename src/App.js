@@ -17,13 +17,13 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
       <Router>
         <Switch>
           <Route path="/" exact>
             {!user?.loggedIn ? <Login /> : <Redirect to="/home" />}
           </Route>
           <Route path="/home" exact>
+            <Header />
             {user?.loggedIn ? <Home /> : <Redirect to="/" />}
           </Route>
         </Switch>

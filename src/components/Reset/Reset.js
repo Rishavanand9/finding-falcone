@@ -1,19 +1,23 @@
-import "./Reset.css"
+import './Reset.css'
 
 function Reset() {
-
   //Handler function on logout button click
   const handleReset = (e) => {
     e.preventDefault()
+
+    localStorage.setItem('planet', JSON.stringify([]))
+    localStorage.setItem('vehicle', JSON.stringify([]))
+    localStorage.setItem('time', JSON.stringify(0))
+
+    alert('Planet selection cleared')
   }
 
-  debugger
   return (
-    <div className="reset">
+    <div className="reset fade-in">
       <button className="reset-button" onClick={handleReset}>
         Reset
       </button>
-      </div>
+    </div>
   )
 }
 
