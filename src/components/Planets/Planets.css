@@ -7,7 +7,7 @@
 }
 
 .planetImg{
-    margin: 2em;
+    margin: 4px;
     filter: drop-shadow(2px 4px 6px black);
     opacity: 0.4;
 }
