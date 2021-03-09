@@ -1,0 +1,9 @@
+.reset-button{
+    border-radius: 20em;
+    padding: 20%;
+    font-family: Inter;
+    color: white;
+    cursor: pointer;
+    background-color: yellowgreen;
+    margin-right: 2em;
+}

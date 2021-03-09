@@ -1,0 +1,56 @@
+.login{
+    font-family: Inter;
+}
+
+.h1{
+    color: white;
+    font-family: Inter;
+}
+
+.loginroot{
+    float: right;
+    margin-top: 4em;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.kingName{
+    color: yellowgreen;
+}
+
+.planetName{
+    color: yellowgreen;
+}
+
+.login-form > input{
+    margin: 20px;
+    padding: 15px;
+    outline: none;
+    border-radius: 20em;
+    font-family: Inter;
+    background-color: black;
+    color: yellowgreen;
+    border: 1px solid yellowgreen;
+    box-shadow: none;
+}
+
+.submit{
+    margin: 20px;
+    padding: 15px;
+    border-radius: 20em;
+    font-family: Inter;
+    background-color: #9acd328f;
+    color: black;
+    border: 1px solid yellowgreen;
+    box-shadow: none;
+}
+
+.submit:hover{
+    background-color: yellowgreen;
+    cursor: pointer;
+}
