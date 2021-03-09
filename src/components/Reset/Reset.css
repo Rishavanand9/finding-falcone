@@ -4,14 +4,13 @@
     font-family: Inter;
     color: white;
     cursor: pointer;
-    background-color: yellowgreen;
+    background-color: rgb(56, 58, 54);
     box-shadow: none;
     border: 1px solid teal;
     margin-right: 2em;
 }
 
 .reset-button:hover{
-    background-color: rgb(56, 58, 54);
 }
 
 .reset{

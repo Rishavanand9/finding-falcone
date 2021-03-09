@@ -25,6 +25,7 @@
 
 }
 
+
 .findButton > button{
     border-radius: 8px;
     background-color: yellowgreen;
@@ -36,6 +37,8 @@
     padding: 10px;
     width: 100px;
     transition: all 0.5s;
+    min-width: 10em;
+    margin: 20px;
     cursor: pointer;
     margin-bottom: 5em;
 }

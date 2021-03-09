@@ -60,6 +60,15 @@ function Planets() {
     }
   }
 
+  const handleReset = (e) => {
+    e.preventDefault()
+    localStorage.setItem('planet', JSON.stringify([]))
+    localStorage.setItem('vehicle', JSON.stringify([]))
+    localStorage.setItem('time', JSON.stringify(0))
+    setPlanetState(null)
+    alert('Planet selection cleared')
+  }
+
   const handleFind = async (e) => {
     e.preventDefault()
 
@@ -67,11 +76,13 @@ function Planets() {
 
     if (localPlanet.filter((v, i, a) => a.indexOf(v) === i).length < 4) {
       alert('Please select atleast 4 Planets')
+      setLoading(false)
     } else {
       const results = await findFalcone(user.accessToken)
 
       if (results.error || results.status === 'false') {
         alert(results.error || 'Falcons Lost')
+        setLoading(false)
       } else {
         //Add User State to store
         dispath(
@@ -91,6 +102,7 @@ function Planets() {
     setModal(false)
   }
 
+  console.log(localPlanet, localTimeTaken)
   const CardContent = (i) => (
     <div
       className={
@@ -136,6 +148,9 @@ function Planets() {
           Time Taken : <span className="homeName">{localTimeTaken}</span>
         </h1>
         <button onClick={handleFind}>Find Falcone</button>
+        <button className="reset-button" onClick={handleReset}>
+          Reset
+        </button>
       </div>
     </>
   )
