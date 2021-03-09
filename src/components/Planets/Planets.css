@@ -13,7 +13,6 @@
 }
 
 .planetImg:hover{
-    margin: 2em;
     opacity: 1;
     cursor: pointer;
 }
